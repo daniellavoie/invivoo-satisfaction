@@ -27,4 +27,11 @@
   	  <url>http://nexus.invivoo.cspinformatique.com/repository/invivoo-snapshot/</url>
   	</snapshotRepository>
   </distributionManagement>
+  
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+  </dependencies>
 </project>
