@@ -6,13 +6,14 @@
 		<artifactId>satisfaction-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+	
 	<artifactId>satisfaction-tests</artifactId>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.invivoo.satisfaction</groupId>
-			<artifactId>satisfaction-server</artifactId>
-			<version>${project.version}</version>
+			<artifactId>satisfaction-model</artifactId>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -22,6 +23,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
