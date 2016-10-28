@@ -3,6 +3,10 @@ package com.invivoo.satisfaction.model;
 public class Consultant {
 	private String firstName;
 	private String lastName;
+	
+	public Consultant(){
+		
+	}
 
 	public Consultant(String firstName, String lastName) {
 		this.firstName = firstName;
