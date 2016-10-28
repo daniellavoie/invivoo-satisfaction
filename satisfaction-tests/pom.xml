@@ -13,7 +13,6 @@
 			<groupId>com.invivoo.satisfaction</groupId>
 			<artifactId>satisfaction-server</artifactId>
 			<version>${project.version}</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
