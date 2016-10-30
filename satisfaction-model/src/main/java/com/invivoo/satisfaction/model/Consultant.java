@@ -1,31 +1,9 @@
 package com.invivoo.satisfaction.model;
 
-public class Consultant {
-	private String firstName;
-	private String lastName;
+public interface Consultant {
+	String getEmail();
 	
-	public Consultant(){
-		
-	}
-
-	public Consultant(String firstName, String lastName) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+	String getFirstName();
+	
+	String getLastName();
 }

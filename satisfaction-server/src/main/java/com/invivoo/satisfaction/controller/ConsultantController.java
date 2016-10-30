@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.invivoo.satisfaction.model.Consultant;
+import com.invivoo.satisfaction.model.impl.ConsultantImpl;
 import com.invivoo.satisfaction.service.ConsultantService;
 
 @RestController
@@ -18,7 +18,7 @@ public class ConsultantController {
 	}
 
 	@RequestMapping
-	public List<Consultant> findAll() {
+	public List<ConsultantImpl> findAll() {
 		return consultantService.findAll();
 	}
 }
