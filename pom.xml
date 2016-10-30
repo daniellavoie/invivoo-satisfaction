@@ -47,4 +47,10 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	
+    <scm>
+        <url>https://github.com/Invivoo/invivoo-satisfaction</url>
+        <connection>scm:git:https://github.com/Invivoo/invivoo-satisfaction</connection>
+        <developerConnection>scm:git:https://github.com/Invivoo/invivoo-satisfaction.git</developerConnection>
+    </scm>
 </project>
