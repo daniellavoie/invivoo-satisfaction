@@ -13,7 +13,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.RestTemplate;
 
-import com.invivoo.satisfaction.model.Consultant;
+import com.invivoo.satisfaction.model.impl.ConsultantImpl;
 import com.invivoo.satisfaction.tests.SatisfactionTestApplication;
 
 @RunWith(SpringRunner.class)
@@ -29,7 +29,7 @@ public class ConsultantControllerTest {
 	public void testFindAll() {
 		Assert.assertEquals("Should have returned 3 consultants.", 3,
 				restTemplate.exchange(satisfactionServerUrl + "/consultant", HttpMethod.GET, null,
-						new ParameterizedTypeReference<List<Consultant>>() {
+						new ParameterizedTypeReference<List<ConsultantImpl>>() {
 						}).getBody().size());
 	}
 }
