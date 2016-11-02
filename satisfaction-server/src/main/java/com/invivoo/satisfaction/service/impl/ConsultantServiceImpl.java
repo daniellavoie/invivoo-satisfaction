@@ -12,6 +12,10 @@ import com.invivoo.satisfaction.service.ConsultantService;
 public class ConsultantServiceImpl implements ConsultantService {
 	private ConsultantRepository consultantRepository;
 
+	public ConsultantServiceImpl(ConsultantRepository consultantRepository) {
+		this.consultantRepository = consultantRepository;
+	}
+
 	@Override
 	public List<ConsultantImpl> findAll() {
 		return consultantRepository.findAll();
