@@ -2,7 +2,7 @@ node { // <1>
   stage('Build') { // <2>
     withMaven(
       maven: 'maven-3',
-      globalMavenSettingsConfig: 'Jenkins Global Settings',
+      globalMavenSettingsConfig: 'invivoo-settings',
       mavenLocalRepo: '.repository'
     ) {
       // Run the maven build
