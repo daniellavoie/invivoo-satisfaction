@@ -10,9 +10,9 @@ node {
       // Run the maven build
       sh "mvn clean deploy"
 
-      docker
-        .withServer([uri: "unix:///var/run/docker.sock"])
-        .build("daniellavoie/satisfaction", "-f satisfaction-server/Dockerfile")
+      withDockerServer([uri: 'unix:///var/run/docker.sock']) {
+          docker.build("daniellavoie/satisfaction", "-f satisfaction-server/Dockerfile")
+      }
     }
   }
 
