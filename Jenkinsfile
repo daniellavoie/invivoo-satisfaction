@@ -11,7 +11,7 @@ node {
       sh "mvn clean deploy"
 
       withDockerServer([uri: 'unix:///var/run/docker.sock']) {
-          docker.build("daniellavoie/satisfaction", "-f satisfaction-server/Dockerfile")
+          docker.build("daniellavoie/satisfaction", "satisfaction-server")
       }
     }
   }
