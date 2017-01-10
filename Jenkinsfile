@@ -1,6 +1,7 @@
 node { // <1>
   stage('Build') { // <2>
     withMaven(
+      maven: 'maven-3',
       mavenSettingsConfig: 'Jenkins Global Settings',
       mavenLocalRepo: '.repository'
     ) {
