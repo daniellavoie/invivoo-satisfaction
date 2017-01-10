@@ -6,9 +6,13 @@ node {
       mavenLocalRepo: '.repository'
     ) {
       checkout scm
-      
+
       // Run the maven build
       sh "mvn clean deploy"
+
+      docker
+        .withServer("unix:///var/run/docker.sock")
+        .build("daniellavoie/satisfaction", "-f satisfaction-server/Dockerfile")
     }
   }
 
