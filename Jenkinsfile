@@ -1,6 +1,7 @@
 node { // <1>
-  stage('Build') { // <2>
-    scm checkout
+  stage 'Checkout'
+
+  stage('Build') {
     withMaven(
       maven: 'maven-3',
       globalMavenSettingsConfig: 'invivoo-settings',
@@ -10,9 +11,11 @@ node { // <1>
       sh "mvn clean deploy"
     }
   }
+
   stage('Test') {
     /* .. snip .. */
   }
+  
   stage('Deploy') {
     /* .. snip .. */
   }
